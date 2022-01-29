@@ -18,7 +18,7 @@ const IndexPage: NextPage = () => {
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <div className="overflow-auto ">
+      <div className="overflow-auto">
         {data.map((league: League, index: number) => {
           const src = console.log(league['Logo de la Liga'])
           return (
