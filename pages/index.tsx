@@ -4,11 +4,8 @@ import Logo from '../components/Logo'
 
 import useSWR from 'swr'
 import LoadingSpinner from '../components/LoadingSpiner'
-interface League {
-  'Nombre De La Liga': string
-  Identificador: string
-  'Logo de la Liga': string
-}
+
+import { League } from '../lib/types'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 const API: string = 'https://footbal-api.herokuapp.com/leagues'
@@ -23,15 +20,18 @@ const IndexPage: NextPage = () => {
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <main className="flex items-center justify-center h-screen">
+      <main className="flex items-center justify-center">
         <div>
           {data.map((league: League, index: number) => {
             const src = console.log(league['Logo de la Liga'])
             return (
-              <div key={index} className="flex items-center justify-start">
+              <div
+                key={index}
+                className="flex items-center justify-start gap-2"
+              >
                 <div>
                   <Logo
-                    logoSrc="https://robohash.org/nihilquasiquis.png?size=50x50&set=set1"
+                    logoSrc={league['Logo de la Liga']}
                     logoWidth={50}
                     logoHeight={50}
                     logoAlt={'Logo de la liga'}
