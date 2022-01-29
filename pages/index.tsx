@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Logo from '../components/Logo'
 
 import useSWR from 'swr'
+import LoadingSpinner from '../components/LoadingSpiner'
 interface League {
   'Nombre De La Liga': string
   Identificador: string
@@ -16,13 +17,13 @@ const IndexPage: NextPage = () => {
   const { data, error } = useSWR(API, fetcher)
 
   if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  if (!data) return <LoadingSpinner />
 
   console.log(data[0]['Logo de la Liga'])
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <main className="flex items-center justify-center">
+      <main className="flex items-center justify-center h-screen">
         <div>
           {data.map((league: League, index: number) => {
             const src = console.log(league['Logo de la Liga'])
