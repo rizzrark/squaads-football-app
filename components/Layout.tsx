@@ -18,11 +18,13 @@ const Layout: React.FC<Props> = ({
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>Title</header>
-    {children}
-    <footer>
-      <hr />
-      <span>I&apos;m here to stay (Footer)</span>
-    </footer>
+    <main className="flex flex-col items-center justify-center min-h-screen">
+      {children}
+      <footer className="mt-auto">
+        <hr />
+        <span>I&apos;m here to stay (Footer)</span>
+      </footer>
+    </main>
   </div>
 )
 
