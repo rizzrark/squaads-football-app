@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import Layout from '../components/Layout'
-import Image from 'next/image'
+import Logo from '../components/Logo'
 
 import useSWR from 'swr'
 interface League {
@@ -29,11 +29,11 @@ const IndexPage: NextPage = () => {
             return (
               <div key={index} className="flex items-center justify-start">
                 <div>
-                  <Image
-                    src="https://robohash.org/nihilquasiquis.png?size=50x50&set=set1"
-                    width={50}
-                    height={50}
-                    alt={'Logo de la liga'}
+                  <Logo
+                    logoSrc="https://robohash.org/nihilquasiquis.png?size=50x50&set=set1"
+                    logoWidth={50}
+                    logoHeight={50}
+                    logoAlt={'Logo de la liga'}
                   />
                 </div>
                 <header>{league['Nombre De La Liga']}</header>
