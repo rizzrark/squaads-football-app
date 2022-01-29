@@ -1,13 +1,49 @@
 import { NextPage } from 'next'
-import Link from 'next/link'
 import Layout from '../components/Layout'
+import Image from 'next/image'
 
-const IndexPage: NextPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <main className="flex justify-center items-center">
-      <h1 className="text-6xl text-blue-600">Hello Squaads 👋</h1>
-    </main>
-  </Layout>
-)
+import useSWR from 'swr'
+interface League {
+  'Nombre De La Liga': string
+  Identificador: string
+  'Logo de la Liga': string
+}
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
+const API: string = 'https://footbal-api.herokuapp.com/leagues'
+
+const IndexPage: NextPage = () => {
+  const { data, error } = useSWR(API, fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  console.log(data[0]['Logo de la Liga'])
+
+  return (
+    <Layout title="Home | Next.js + TypeScript Example">
+      <main className="flex items-center justify-center">
+        <div>
+          {data.map((league: League, index: number) => {
+            const src = console.log(league['Logo de la Liga'])
+            return (
+              <div key={index} className="flex items-center justify-start">
+                <div>
+                  <Image
+                    src="https://robohash.org/nihilquasiquis.png?size=50x50&set=set1"
+                    width={50}
+                    height={50}
+                    alt={'Logo de la liga'}
+                  />
+                </div>
+                <header>{league['Nombre De La Liga']}</header>
+              </div>
+            )
+          })}
+        </div>
+      </main>
+    </Layout>
+  )
+}
 
 export default IndexPage
