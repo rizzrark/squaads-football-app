@@ -14,11 +14,14 @@ const Leagues: React.FC = () => {
   if (!data) return <LoadingSpinner />
 
   return (
-    <div className="overflow-auto">
+    <div className="w-full p-4 space-y-4 rounded-2xl ">
       {data?.map((league: League, index: number) => {
         return (
-          <div key={index} className="flex items-center justify-start gap-2">
-            <div>
+          <div
+            key={index}
+            className="flex items-center justify-start w-full gap-4 p-1 border-2 shadow border-neutral-500 rounded-2xl"
+          >
+            <div className="p-1 rounded-full bg-slate-100">
               <Logo
                 logoSrc={league['Logo de la Liga']}
                 logoWidth={50}
@@ -26,7 +29,9 @@ const Leagues: React.FC = () => {
                 logoAlt={'Logo de la liga'}
               />
             </div>
-            <header>{league['Nombre De La Liga']}</header>
+            <header className="text-lg font-bold tracking-wide">
+              {league['Nombre De La Liga']} - Liga
+            </header>
           </div>
         )
       })}

@@ -34,10 +34,9 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         navIconSize={32}
         navColor="bg-neutral-800"
       />
-      <main className="flex flex-col items-center justify-center pt-4 pb-20 mx-4">
+      <div className="flex flex-col items-center justify-center pt-4 pb-20 mx-4">
         {children}
-        <DummyTextComponent />
-      </main>
+      </div>
     </>
   )
 }

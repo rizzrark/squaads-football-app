@@ -21,7 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
   return (
     <nav
-      className={`fixed bottom-0 flex w-full  h-16  shadow-lg sm:top-0 rounded-t-2xl ${navColor}`}
+      className={`fixed bottom-0 flex w-full  h-16  shadow-lg sm:top-0 rounded-t-2xl z-50 ${navColor}`}
     >
       <ul className="flex items-center w-full justify-evenly">
         <li
