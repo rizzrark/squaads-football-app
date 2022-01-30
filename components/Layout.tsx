@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import Navigation from './Navigation'
 import DummyTextComponent from './DummyTextComponent'
@@ -19,12 +18,11 @@ const Layout: React.FC<Props> = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header className="fixed top-0">Title</header>
+    <Navigation navHomeIconSize={40} navIconSize={32} navColor="bg-blue-600" />
     <main className="flex flex-col items-center justify-center ">
       {children}
       <DummyTextComponent />
     </main>
-    <Navigation navHomeIconSize={40} navIconSize={32} navColor="bg-blue-600" />
   </div>
 )
 

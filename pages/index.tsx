@@ -17,26 +17,24 @@ const IndexPage: NextPage = () => {
   if (!data) return <LoadingSpinner />
 
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
-      <div className="overflow-auto">
-        {data.map((league: League, index: number) => {
-          const src = console.log(league['Logo de la Liga'])
-          return (
-            <div key={index} className="flex items-center justify-start gap-2">
-              <div>
-                <Logo
-                  logoSrc={league['Logo de la Liga']}
-                  logoWidth={50}
-                  logoHeight={50}
-                  logoAlt={'Logo de la liga'}
-                />
-              </div>
-              <header>{league['Nombre De La Liga']}</header>
+    <div className="overflow-auto">
+      {data.map((league: League, index: number) => {
+        const src = console.log(league['Logo de la Liga'])
+        return (
+          <div key={index} className="flex items-center justify-start gap-2">
+            <div>
+              <Logo
+                logoSrc={league['Logo de la Liga']}
+                logoWidth={50}
+                logoHeight={50}
+                logoAlt={'Logo de la liga'}
+              />
             </div>
-          )
-        })}
-      </div>
-    </Layout>
+            <header>{league['Nombre De La Liga']}</header>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
