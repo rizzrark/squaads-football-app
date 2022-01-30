@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({
   >
     <ul className="flex items-center w-full justify-evenly">
       <li>
-        <Link href="/">
+        <Link href="/teams">
           <a>
             <BsFillPeopleFill size={navIconSize} />
           </a>

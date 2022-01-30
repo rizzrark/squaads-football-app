@@ -19,7 +19,6 @@ const IndexPage: NextPage = () => {
   return (
     <div className="overflow-auto">
       {data.map((league: League, index: number) => {
-        const src = console.log(league['Logo de la Liga'])
         return (
           <div key={index} className="flex items-center justify-start gap-2">
             <div>
