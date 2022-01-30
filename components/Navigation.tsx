@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { IoIosFootball, IoMdPerson } from 'react-icons/io'
-import { BsFillPeopleFill } from 'react-icons/bs'
+import { BsFillPeopleFill, BsClipboardData } from 'react-icons/bs'
+import { GiSoccerBall } from 'react-icons/gi'
 
 type EmptyString = ''
 interface NavigationProps {
@@ -26,21 +26,21 @@ const Navigation: React.FC<NavigationProps> = ({
         <li className={router.pathname === '/teams' ? active : ''}>
           <Link href="/teams">
             <a>
-              <BsFillPeopleFill size={navIconSize} />
+              <BsClipboardData size={navIconSize} />
             </a>
           </Link>
         </li>
         <li className={router.pathname === '/' ? active : ''}>
           <Link href="/">
             <a>
-              <IoIosFootball size={navHomeIconSize} />
+              <GiSoccerBall size={navHomeIconSize} />
             </a>
           </Link>
         </li>
         <li className={router.pathname === '/players' ? active : ''}>
           <Link href="/players">
             <a>
-              <IoMdPerson size={navIconSize} />
+              <BsFillPeopleFill size={navIconSize} />
             </a>
           </Link>
         </li>
