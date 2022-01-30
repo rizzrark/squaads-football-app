@@ -33,7 +33,7 @@ const Navigation: React.FC<NavigationProps> = ({
         </Link>
       </li>
       <li>
-        <Link href="/about">
+        <Link href="/players">
           <a>
             <IoMdPerson size={navIconSize} />
           </a>
