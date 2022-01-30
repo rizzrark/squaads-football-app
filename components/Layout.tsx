@@ -24,7 +24,7 @@ const Layout: React.FC<Props> = ({
       {children}
       <DummyTextComponent />
     </main>
-    <Navigation />
+    <Navigation navHomeIconSize={40} navIconSize={32} navColor="bg-blue-600" />
   </div>
 )
 
