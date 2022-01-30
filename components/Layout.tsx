@@ -14,8 +14,12 @@ const Layout: React.FC<Props> = ({ children }: Props) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Navigation navHomeIconSize={40} navIconSize={32} navColor="bg-blue-600" />
-    <main className="flex flex-col items-center justify-center ">
+    <Navigation
+      navHomeIconSize={40}
+      navIconSize={32}
+      navColor="bg-neutral-800"
+    />
+    <main className="flex flex-col items-center justify-center mx-4 ">
       {children}
       <DummyTextComponent />
     </main>
