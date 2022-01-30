@@ -17,11 +17,11 @@ const Navigation: React.FC<NavigationProps> = ({
 }: NavigationProps) => {
   const router = useRouter()
   const active = 'text-slate-50 scale-125 '
-  const inactive = 'text-stone-400 scale-85 '
+  const inactive = 'text-stone-400  '
 
   return (
     <nav
-      className={`fixed bottom-0 flex w-full h-20 m-0 shadow-lg sm:top-0 rounded-t-3xl ${navColor}`}
+      className={`fixed bottom-0 flex w-full  h-16  shadow-lg sm:top-0 rounded-t-2xl ${navColor}`}
     >
       <ul className="flex items-center w-full justify-evenly">
         <li
