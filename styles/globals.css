@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .pagetitle {
+    @apply flex items-center justify-center sticky text-slate-50 top-0 w-full h-16 sm:hidden z-50 rounded-b-2xl;
+  }
+}

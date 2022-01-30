@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import LoadingSpinner from '../components/LoadingSpiner'
 
 import { League } from '../lib/types'
+import { PageTitle } from '../components/PageTitle'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 const API: string = 'https://footbal-api.herokuapp.com/leagues'
@@ -21,7 +22,7 @@ export default function IndexPage() {
         <title>Ligas</title>
       </Head>
       <div className="overflow-auto">
-        {data.map((league: League, index: number) => {
+        {data?.map((league: League, index: number) => {
           return (
             <div key={index} className="flex items-center justify-start gap-2">
               <div>
