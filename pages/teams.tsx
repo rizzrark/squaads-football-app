@@ -1,15 +1,13 @@
 import Head from 'next/head'
-
-export default function Teams() {
+import Teams from '../components/Teams'
+export default function TeamsPage() {
   return (
     <>
       <Head>
         <title>Equipos</title>
       </Head>
       <main>
-        <div>
-          <h1>Equipos</h1>
-        </div>
+        <Teams />
       </main>
     </>
   )
