@@ -30,7 +30,7 @@ const Leagues: React.FC = () => {
               />
             </div>
             <header className="text-lg font-bold tracking-wide">
-              {league['Nombre De La Liga']} - Liga
+              Liga - {league['Nombre De La Liga']}
             </header>
           </div>
         )
