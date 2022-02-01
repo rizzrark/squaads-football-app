@@ -35,7 +35,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         navColor="bg-neutral-800"
       />
       <div className="flex flex-col items-center justify-center pt-4 pb-20 mx-4">
-        {children}
+        <div className="mt-14 md:mt-16">{children}</div>
       </div>
     </>
   )
