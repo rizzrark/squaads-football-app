@@ -14,7 +14,7 @@ const Teams: React.FC = () => {
   if (!data) return <LoadingSpinner />
 
   return (
-    <div className="w-full p-4 space-y-4 rounded-2xl ">
+    <div className="w-full p-4 space-y-4 rounded-2xl min-w-[300px]">
       {data?.map((team: Team, index: number) => {
         return (
           <div

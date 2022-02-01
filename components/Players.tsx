@@ -14,7 +14,7 @@ const Players: React.FC = () => {
   if (!data) return <LoadingSpinner />
 
   return (
-    <div className="w-full p-4 space-y-4 rounded-2xl">
+    <div className="w-full p-4 space-y-4 rounded-2xl min-w-[300px]">
       {data?.map((player: Player, index: number) => {
         return (
           <div
