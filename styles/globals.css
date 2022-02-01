@@ -6,10 +6,11 @@
 
 @layer components {
   .pagetitle {
-    @apply flex items-center justify-center sm:fixed bottom-0 
+    @apply flex items-center justify-center sm:fixed bottom-0 shadow-lg
     text-slate-50 w-full h-16 z-50 rounded-b-2xl sm:rounded-t-2xl sm:rounded-b-none;
   }
   .navigation {
-    @apply fixed bottom-0 flex w-full h-16 shadow-lg sm:top-0 rounded-t-2xl sm:rounded-b-xl sm:rounded-t-none z-50;
+    @apply fixed bottom-0 flex w-full h-16 shadow-lg 
+    rounded-t-2xl sm:rounded-b-xl sm:rounded-t-none z-50 sm:static;
   }
 }
