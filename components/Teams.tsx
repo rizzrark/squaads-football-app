@@ -33,7 +33,7 @@ const Teams: React.FC = () => {
               <header className="text-lg font-bold tracking-wide">
                 {team['Nombre del equipo']}
               </header>
-              <p>{team.Liga}</p>
+              {/* <p>{team.Liga}</p> */}
             </div>
           </div>
         )
