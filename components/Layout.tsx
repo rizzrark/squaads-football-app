@@ -1,46 +1,28 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
+import Navigation from './Navigation'
+import DummyTextComponent from './DummyTextComponent'
 
 type Props = {
   children?: ReactNode
   title?: string
 }
 
-const Layout: React.FC<Props> = ({
-  children,
-  title = 'This is the default title',
-}: Props) => (
+const Layout: React.FC<Props> = ({ children }: Props) => (
   <div>
     <Head>
-      <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        |
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>
-        |
-        <Link href="/api/users">
-          <a>Users API</a>
-        </Link>
-        |
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I&apos;m here to stay (Footer)</span>
-    </footer>
+    <Navigation
+      navHomeIconSize={40}
+      navIconSize={32}
+      navColor="bg-neutral-800"
+    />
+    <main className="flex flex-col items-center justify-center mx-4 ">
+      {children}
+      <DummyTextComponent />
+    </main>
   </div>
 )
 
